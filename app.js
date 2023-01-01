@@ -57,6 +57,6 @@ app.use(flash())
 app.use('/', index)
 app.use('/users', users)
 
-app.listen(80, function(){
+app.listen(80, '127.0.0.1', function(){
  console.log("Server port: 80")
 })
