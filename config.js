@@ -1,6 +1,6 @@
 var config = {
  database : {
-  host: 'localhost',
+  host: 'my-db-instance.c0rznvbeuzkj.us-east-1.rds.amazonaws.com',
   user: 'root',
   password: 'password',
   port: 3306,
