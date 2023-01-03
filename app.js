@@ -125,31 +125,15 @@ var mysql = require('mysql')
 var myConnection = require('express-myconnection')
 
 var config = require('./config')
-// const     databaseExists = true;
-// let db_con=require('./db.js')
+
 let db_con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
-    port: 3306,
+    host: "my-db-instance.c0rznvbeuzkj.us-east-1.rds.amazonaws.com",
+    user: "admin",
+    password: "adminadmin",
+    port: 80,
     database:""
   });
 
-// var dbOptions = {
-//  host: "my-db-instance.c0rznvbeuzkj.us-east-1.rds.amazonaws.com",
-//  user: "admin",
-//  password: "adminadmin",
-// //  port: config.database.port,
-//  database: "nodejs_crud",
-// }
-// db_con.connect((err) => {
-//   if (err) {
-//     console.log("Database db_con Failed !!!", err);
-    
-//   } else {
-//     databaseExists = true;
-//     console.log("connected to Database");
-//   }
 
   console.log("still here ")
   let databaseName = "users";
@@ -169,9 +153,9 @@ let db_con = mysql.createConnection({
             if (err) throw err;
             console.log("Database created");
              db_con = mysql.createConnection({
-                host: "localhost",
-                user: "root",
-                password: "password",
+                host: "my-db-instance.c0rznvbeuzkj.us-east-1.rds.amazonaws.com",
+                user: "admin",
+                password: "adminadmin",
                 port: 3306,
                 database:databaseName,
               });
@@ -233,8 +217,8 @@ app.use(flash())
 app.use('/', index)
 app.use('/users',usersRouter)
 
-app.listen(3000, '127.0.0.1', function(){
- console.log("Server port: 3000")
+app.listen(80, '127.0.0.1', function(){
+ console.log("Server port: 80")
 })
 
 
