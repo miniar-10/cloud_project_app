@@ -18,6 +18,9 @@
     "express-session": "^1.15.6",
     "express-validator": "^5.1.2",
     "method-override": "^2.3.10",
-    "mysql": "^2.15.0"
+    "morgan": "^1.10.0",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   }
 }
